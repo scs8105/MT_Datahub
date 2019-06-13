@@ -1,0 +1,200 @@
+{
+   "commerceSuiteVersion": "1811.3",
+   "extensions": [
+       "mcc",
+       "backoffice",
+       "platformbackoffice",
+       "basecommercebackoffice",  
+       "adaptivesearchsolr",
+       "adaptivesearchbackoffice",
+       "adaptivesearchsamplesaddon",
+       "adaptivesearchwebservices",
+       "commerceservicesbackoffice",
+       "solrfacetsearchbackoffice",
+       "ycommercewebservices",
+       "ycommercewebservicestest",
+       "electronicsstore",
+       "acceleratorwebservicesaddon",
+       "orderselfserviceaddon",
+       "customersupportbackoffice",
+       "customerticketingaddon",
+       "commerceorgsamplesaddon",
+       "rulebuilderbackoffice",
+       "couponbackoffice",
+       "droolsruleengineservices",
+       "couponfacades",
+       "promotionenginesamplesaddon",
+       "cmswebservices",
+       "smarteditwebservices",
+       "cmssmarteditwebservices",
+       "permissionswebservices",
+       "smarteditaddon",
+       "cmssmartedit",
+       "cmsbackoffice",
+       "multicountrysampledataaddon",       
+       "textfieldconfiguratortemplatebackoffice",
+       "textfieldconfiguratortemplateaddon",
+       "assistedservicestorefront",
+       "assistedservicewebservices",
+       "assistedservicepromotionaddon",
+       "pcmbackofficesamplesaddon",
+       "personalizationsearchsamplesaddon",
+       "datahubadapter",
+       "secureportaladdon",
+       "datahubbackoffice",
+       "sapcoreaddon",
+       "sapcoreconfigurationbackoffice",
+       "sapmodelbackoffice",
+       "sapcustomerb2bbackoffice",
+       "b2bsappricing",
+       "sappricingbackoffice",
+       "ysaporderfulfillment",
+       "saporderexchangeb2b",
+       "saporderexchangebackoffice",
+       "ysapordermgmtb2baddon",
+       "sapordermgmtbackoffice",
+       "b2bsapproductavailability",
+       "sapproductavailabilitybackoffice",
+       "sapcreditcheckbackoffice",
+       "sapcoretest"
+   ],
+   "storefrontAddons" : [
+        {
+            "addon": "acceleratorwebservicesaddon",
+            "storefront": "ycommercewebservices",
+            "template": "ycommercewebservices"
+        }        
+    ],
+   "properties": [
+        {
+            "key": "test.property.1",
+            "value": "test.property.1.value"
+        },
+        {
+            "key": "test.property.2",
+            "value": "global"
+        },
+        {
+            "key": "test.property.3",
+            "value": "persona.development",
+            "persona": "development"
+        },
+        {
+            "key": "test.property.4",
+            "value": "persona.staging",
+            "persona": "staging"
+        },
+        {
+            "key": "test.property.5",
+            "value": "persona.production",
+            "persona": "production"
+        },
+        {
+     	      "key":"hac.webroot",
+     	      "value":"/hac"
+    	  },
+        {
+            "key":"persistence.legacy.mode",
+            "value":"false"
+        }
+    ],
+   "aspects": [
+         {
+            "name": "backoffice",
+            "properties": [],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": "/backoffice"
+                },
+                {
+                    "name": "datahubadapter",
+                    "contextPath": "/datahubadapter"
+                },
+                {
+                    "name": "oauth2",
+                    "contextPath": "/authorizationserver"
+                }
+            ]
+        },
+        {
+            "name": "accstorefront",
+            "properties": [
+               {
+                    "key": "regioncache.queryregion.evictionpolicy",
+                    "value": "LRU"
+                }
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "customsitestorefront",
+                    "contextPath": ""
+
+                }
+            ]
+        },
+       {
+            "name": "backgroundProcessing",
+            "properties": [
+                {
+                    "key": "cluster.node.groups",
+                    "value": "backgroundProcessing"
+                },
+                {
+                    "key": "task.workers.max",
+                    "value": "40"
+                },
+                {
+                    "key": "impex.import.workers",
+                    "value": "8"
+                },
+                {
+                    "key": "catalog.sync.workers",
+                    "value": "8"
+                },
+                {
+                    "key": "task.polling.interval",
+                    "value": "1"
+                },
+                {
+                    "key": "processengine.process.canjoinpreviousnode.default",
+                    "value": "true"
+                }             
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "datahubadapter",
+                    "contextPath": "/datahubadapter"
+                },
+                {
+                    "name": "oauth2",
+                    "contextPath": "/authorizationserver"
+                }
+            ]
+        }
+    ]
+}
