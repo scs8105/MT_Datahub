@@ -1,428 +1,107 @@
 {
-  "commerceSuiteVersion": "1811.3",
-  "extensions": [
-    "adaptivesearchsolr",
-    "adaptivesearchbackoffice",
-    "mcc",
-    "b2bcommercebackoffice",
-    "solrfacetsearchbackoffice",
-    "b2badmincockpit",
-    "yacceleratorcockpits",
-    "yacceleratorinitialdata",
-    "yacceleratorstorefront",
-    "ycommercewebservices",
-    "ycommercewebservicestest",
-    "electronicsstore",
-    "powertoolsstore",
-    "solrserver",
-    "acceleratorwebservicesaddon",
-    "b2bacceleratoraddon",
-    "commerceorgaddon",
-    "commerceorgsamplesaddon",
-    "orderselfserviceaddon",
-    "assistedservicestorefront",
-    "customerticketingaddon",
-    "customersupportbackoffice",
-    "rulebuilderbackoffice",
-    "couponbackoffice",
-    "droolsruleengineservices",
-    "couponfacades",
-    "promotionenginesamplesaddon",
-    "textfieldconfiguratortemplatebackoffice",
-    "textfieldconfiguratortemplateaddon",
-    "assistedserviceatddtests",
-    "promotionengineatddtests",
-    "textfieldconfiguratortemplateatddtests",
-    "cmswebservices",
-    "smarteditwebservices",
-    "permissionswebservices",
-    "smarteditaddon",
-    "cmssmartedit",
-    "previewwebservices",
-    "cmssmarteditwebservices",
-    "accountsummaryaddon",
-    "secureportaladdon",
-    "datahubbackoffice",
-    "sapcoreaddon",
-    "sapcoreconfigurationbackoffice",
-    "sapmodelbackoffice",
-    "sapcustomerb2bbackoffice",
-    "b2bsappricing",
-    "sappricingbackoffice",
-    "ysaporderfulfillment",
-    "saporderexchangeb2b",
-    "saporderexchangebackoffice",
-    "ysapordermgmtb2baddon",
-    "sapordermgmtbackoffice",
-    "b2bsapproductavailability",
-    "sapproductavailabilitybackoffice",
-    "sapcreditcheckbackoffice",
-    "sapcoretest",
-    "sapinvoiceaddon",
-    "sapinvoicebol",
-    "sapinvoicefacades",
-    "sapinvoiceservices",
-    "sapcrmmodel",
-    "sapcrmcreditcheck",
-    "sapgenil",
-    "sapcrminvoiceaddon",
-    "sapcrminvoicefacades",
-    "sapcrminvoicebol",
-    "sapcrmb2binvoiceaddon",
-    "sapcrmorderexchange",
-    "sapreturnsbackoffice",
-    "ysapreturnprocess",
-    "sapcrmorderexchangeb2b",
-    "ysapreturnprocessb2b",
-    "sapcrmproductavailability",
-    "b2bsapcrmproductavailability",
-    "sapservicecontractaddon",
-    "sapservicecontractbol",
-    "sapservicecontractfacades",
-    "sapservicecontractservices",
-    "sapservicecontractfacadesb2b",
-    "sapservicecontractservicesb2b",
-    "crmcustomerticketingaddon",
-    "crmcustomerticketingfacades",
-    "sapcrmcategoryschema",
-    "sapcrmcomplaintexchange",
-    "sapcrmticketsystem",
-    "sapcrmb2bticketsystem",
-    "sapcrmb2bcomplaintexchange",
-    "sapcrmordermgmtbol",
-    "sapcrmordermgmtfacade",
-    "sapcrmordermgmtservices",
-    "sapcrmpricing",
-    "sapcrmpricingbol",
-    "sapcrmpricingb2b",
-    "sapcrmpricingbolb2b",
-    "sapcrmcustomerb2b",
-    "sapcrmcustomerb2c",
-    "productregistrationaddon",
-    "productregistrationfacades",
-    "productregistrationservices",
-    "sapcrmproductregistrationbol",
-    "sapcrmibaseaddon",
-    "sapcrmibasecore",
-    "sapcrmibasefacades",
-    "sapcrmibaseservices",
-    "sapcrmserviceorderaddon",
-    "sapserviceorderservices",
-    "sapcrmproductbundlemodel",
-    "sapbusinessagreementaddon",
-    "sapbusinessagreementexchange",
-    "sapbusinessagreementfacades",
-    "sapbusinessagreementservices",
-    "sapbusinessagreementfacadesb2b",
-    "sapbusinessagreementexchangeb2b",
-    "sapbusinessagreementservicesb2b",
-    "yacceleratorstorefront",
-    "b2bsapproductavailabilitycrm",
-    "sapproductavailabilitycrm",
-    "yb2bacceleratorstorefront"
-    ],
-    "storefrontAddons": [
-          {
-            "addon": "commerceorgsamplesaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "assistedservicestorefront",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-                {
-            "addon": "customerticketingaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "promotionenginesamplesaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-        "addon": "textfieldconfiguratortemplateaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "orderselfserviceaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "smarteditaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcoreaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrminvoiceaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapservicecontractaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "productregistrationaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "crmcustomerticketingaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrmserviceorderaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "accountsummaryaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapbusinessagreementaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "commerceorgsamplesaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "assistedservicestorefront",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "customerticketingaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "promotionenginesamplesaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "textfieldconfiguratortemplateaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "orderselfserviceaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "smarteditaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcoreaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrminvoiceaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapservicecontractaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "productregistrationaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "crmcustomerticketingaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrmserviceorderaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "accountsummaryaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapbusinessagreementaddon",
-            "storefront": "yacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "b2bacceleratoraddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "commerceorgaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "ysapordermgmtb2baddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "secureportaladdon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrmibaseaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapcrmb2binvoiceaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "sapinvoiceaddon",
-            "storefront": "yb2bacceleratorstorefront",
-            "template": "yacceleratorstorefront"
-        },
+   "commerceSuiteVersion": "1811.3",
+   "extensions": [
+       "mcc",
+       "backoffice",
+       "platformbackoffice",
+       "basecommercebackoffice",  
+       "adaptivesearchsolr",
+       "adaptivesearchbackoffice",
+       "adaptivesearchsamplesaddon",
+       "adaptivesearchwebservices",
+       "commerceservicesbackoffice",
+       "solrfacetsearchbackoffice",
+       "ycommercewebservices",
+       "ycommercewebservicestest",
+       "electronicsstore",
+       "acceleratorwebservicesaddon",
+       "orderselfserviceaddon",
+       "customersupportbackoffice",
+       "customerticketingaddon",
+       "commerceorgsamplesaddon",
+       "rulebuilderbackoffice",
+       "couponbackoffice",
+       "droolsruleengineservices",
+       "couponfacades",
+       "promotionenginesamplesaddon",
+       "cmswebservices",
+       "smarteditwebservices",
+       "cmssmarteditwebservices",
+       "permissionswebservices",
+       "smarteditaddon",
+       "cmssmartedit",
+       "cmsbackoffice",
+       "multicountrysampledataaddon",       
+       "textfieldconfiguratortemplatebackoffice",
+       "textfieldconfiguratortemplateaddon",
+       "assistedservicestorefront",
+       "assistedservicewebservices",
+       "assistedservicepromotionaddon",
+       "pcmbackofficesamplesaddon",
+       "personalizationsearchsamplesaddon",
+       "datahubadapter",
+       "secureportaladdon",
+       "datahubbackoffice",
+       "sapcoreaddon",
+       "sapcoreconfigurationbackoffice",
+       "sapmodelbackoffice",
+       "sapcustomerb2bbackoffice",
+       "b2bsappricing",
+       "sappricingbackoffice",
+       "ysaporderfulfillment",
+       "saporderexchangeb2b",
+       "saporderexchangebackoffice",
+       "ysapordermgmtb2baddon",
+       "sapordermgmtbackoffice",
+       "b2bsapproductavailability",
+       "sapproductavailabilitybackoffice",
+       "sapcreditcheckbackoffice",
+       "sapcoretest"
+   ],
+   "storefrontAddons" : [
         {
             "addon": "acceleratorwebservicesaddon",
             "storefront": "ycommercewebservices",
             "template": "ycommercewebservices"
-        }
+        }        
     ],
-    "properties": [
-        {
-            "key": "lang.packs",
-            "value": "de,en,es,es_CO,fr,it,ja,ko,pt,ru,zh,zh_TW,hi,id,cs,cy"
-        },
+   "properties": [
         {
             "key": "test.property.1",
-            "value": "test-property-1-value-prod",
-            "persona": "production"
-        },
-        {
-            "key": "test.property.1",
-            "value": "test-property-1-value-dev",
-            "persona": "development"
-        },
-        {
-            "key": "test.property.1",
-            "value": "test-property-1-value"
+            "value": "test.property.1.value"
         },
         {
             "key": "test.property.2",
-            "value": "test-property-2-value"
+            "value": "global"
         },
         {
-            "key": "datahub.backoffice.rest.client.username",
-            "value": "admin"
+            "key": "test.property.3",
+            "value": "persona.development",
+            "persona": "development"
         },
         {
-            "key": "datahub.backoffice.rest.client.password",
-            "value": "nimda"
+            "key": "test.property.4",
+            "value": "persona.staging",
+            "persona": "staging"
         },
         {
-            "key": "datahubadapter.datahuboutbound.url",
-            "value": "http://datahub:8080/datahub-webapp/v1"
+            "key": "test.property.5",
+            "value": "persona.production",
+            "persona": "production"
         },
         {
-            "key": "datahubadapter.datahuboutbound.user",
-            "value": "admin"
-        },
+     	      "key":"hac.webroot",
+     	      "value":"/hac"
+    	  },
         {
-            "key": "datahubadapter.datahuboutbound.password",
-            "value": "nimda"
-        },
-       {
-            "key": "keygen.customer.sap_customer_id.start",
-            "value": "0000490000"
-        },
-        {
-            "key": "keygen.customer.sap_contact_id.start",
-            "value": "0000490000"
-        },
-        {
-            "key": "keygen.order.code.start",
-            "value": "0008005001"
-        },
-        {
-            "key": "keygen.crmcustomer.sap_contact_id.start",
-            "value": "0000490000"
-        },
-        {
-            "key": "sapcustomerexchange.outbound.datahub.feed",
-            "value": "SAPCONSUMER_OUTBOUND_FEED"
-        },
-        {
-            "key": "sapcoreconfiguration.datahuboutbound.enabled",
-            "value": "true"
-        },
-        {
-            "key": "numberseries.cache.size.order_code",
-            "value": "1"
-        },
-        {
-            "key": "keygen.ticket.sap_ticket_id.start",
-            "value": "6900070009"
-        },
-        {
-            "key": "keygen.returnorder.code.start",
-            "value": "2482120903"
-        },
-        {
-            "key": "keygen.ticket.sap_complaint.start",
-            "value": "0006200010"
-        },
-        {
-            "key": "keygen.businessAgreement.sap_businessAgreement_id.start",
-            "value": "000003010000"
-        },
-        {
-            "key":"website.electronics.http",
-            "value":"http://accstorefront.cebz-apjcrmsub2-p1-public.model-t.myhybris.cloud/yacceleratorstorefront"
-        },        
-        {
-            "key":"website.electronics.https",
-            "value":"https://accstorefront.cebz-apjcrmsub2-p1-public.model-t.myhybris.cloud/yacceleratorstorefront"
+            "key":"persistence.legacy.mode",
+            "value":"false"
         }
     ],
-    "aspects": [
-        {
+   "aspects": [
+         {
             "name": "backoffice",
-            "properties": [
-                {
-                    "key": "test.property.1",
-                    "value": "test.property-1-value-prod-backoffice",
-                    "persona": "production"
-                },
-                {
-                    "key": "test.property.2",
-                    "value": "test.property-2-value-backoffice"
-                }
-            ],
+            "properties": [],
             "webapps": [
                 {
                     "name": "hac",
@@ -449,74 +128,71 @@
         {
             "name": "accstorefront",
             "properties": [
-                {
-                    "key": "spring.session.enabled",
-                    "value": "true"
-                },
-                {
-                    "key": "spring.session.yb2bacceleratorstorefront.save",
-                    "value":"async"
-                },
-                {
-                    "key": "spring.session.yb2bacceleratorstorefront.cookie.name",
-                    "value": "JSESSIONID"
-                },
-                {
-                    "key": "spring.session.yb2bacceleratorstorefront.cookie.path",
-                    "value": "/yb2bacceleratorstorefront"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.save",
-                    "value":"async"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.name",
-                    "value": "JSESSIONID"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.path",
-                    "value": "/yacceleratorstorefront"
-                },
-                {
-                    "key":"storefrontContextRoot",
-                    "value":"/"
-                }
-            ],
-            "webapps": [
-                {
-                    "name": "mediaweb",
-                    "contextPath": "/medias"
-                },
-                {
-                    "name": "yb2bacceleratorstorefront",
-                    "contextPath": "/yb2bacceleratorstorefront"
-                },
-                {
-                    "name": "yacceleratorstorefront",
-                    "contextPath": "/yacceleratorstorefront"
-                },
-                {
-                    "name": "acceleratorservices",
-                    "contextPath": "/acceleratorservices"
-                }
-            ]
-        },
-        {
-            "name": "backgroundProcessing",
-            "properties": [
-                {
-                    "key": "cluster.node.groups",
-                    "value": "integration,yHotfolderCandidate"
+               {
+                    "key": "regioncache.queryregion.evictionpolicy",
+                    "value": "LRU"
                 }
             ],
             "webapps": [
                 {
                     "name": "hac",
-                    "contextPath": ""
+                    "contextPath": "/hac"
                 },
                 {
                     "name": "mediaweb",
                     "contextPath": "/medias"
+                },
+                {
+                    "name": "customsitestorefront",
+                    "contextPath": ""
+
+                }
+            ]
+        },
+       {
+            "name": "backgroundProcessing",
+            "properties": [
+                {
+                    "key": "cluster.node.groups",
+                    "value": "backgroundProcessing"
+                },
+                {
+                    "key": "task.workers.max",
+                    "value": "40"
+                },
+                {
+                    "key": "impex.import.workers",
+                    "value": "8"
+                },
+                {
+                    "key": "catalog.sync.workers",
+                    "value": "8"
+                },
+                {
+                    "key": "task.polling.interval",
+                    "value": "1"
+                },
+                {
+                    "key": "processengine.process.canjoinpreviousnode.default",
+                    "value": "true"
+                }             
+            ],
+            "webapps": [
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "datahubadapter",
+                    "contextPath": "/datahubadapter"
+                },
+                {
+                    "name": "oauth2",
+                    "contextPath": "/authorizationserver"
                 }
             ]
         }
