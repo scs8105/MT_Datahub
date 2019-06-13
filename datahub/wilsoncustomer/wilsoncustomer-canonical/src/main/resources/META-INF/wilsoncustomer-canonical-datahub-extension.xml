@@ -1,0 +1,60 @@
+<!-- ~ [y] hybris Platform ~ ~ Copyright (c) 2018 SAP SE or an SAP affiliate 
+	company. ~ All rights reserved. ~ ~ This software is the confidential and 
+	proprietary information of SAP ~ ("Confidential Information"). You shall 
+	not disclose such Confidential ~ Information and shall use it only in accordance 
+	with the terms of the ~ license agreement you entered into with SAP. -->
+<extension
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.hybris.com/schema/"
+	xsi:schemaLocation="http://www.hybris.com/schema/ http://www.hybris.com/schema/datahub-metadata-schema-1.3.0.xsd"
+	name="wilsoncustomer-canonical">
+
+	<dependencies>
+		<dependency>
+			<extension>sapidocintegration</extension>
+		</dependency>
+		<dependency>
+			<extension>sapcustomer-canonical</extension>
+		</dependency>
+	</dependencies>
+
+	<canonicalItems>
+		<item>
+			<type>SampleCanonicalItem</type>
+			<description>Canonical representation of sample item</description>
+			<status>ACTIVE</status>
+			<attributes>
+				<attribute>
+					<name>identifier</name>
+					<model>
+						<localizable>false</localizable>
+						<collection>false</collection>
+						<type>String</type>
+						<primaryKey>true</primaryKey>
+					</model>
+				</attribute>
+				<attribute>
+					<name>sampleAttribute</name>
+					<model>
+						<localizable>false</localizable>
+						<collection>false</collection>
+						<type>String</type>
+						<primaryKey>false</primaryKey>
+					</model>
+				</attribute>
+			</attributes>
+		</item>
+		<item>
+			<type>CanonicalParty</type>
+			<attributes>
+				<attribute>
+					<name>currency</name>
+					<model>
+						<type>String</type>
+					</model>
+				</attribute>
+			</attributes>
+		</item>
+	</canonicalItems>
+
+</extension>

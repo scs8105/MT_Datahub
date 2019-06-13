@@ -1,0 +1,30 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2018 SAP SE or an SAP affiliate company.
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of SAP
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with SAP.
+  -->
+ <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+	   xmlns:int-xml="http://www.springframework.org/schema/integration/xml"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		                   http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+                           http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd">
+
+	
+	<!-- Maps received IDOCs of type: "DEBMAS07" by value of attribute "KTOKD" to corresponding mapping service -->
+      <int-xml:xpath-router id="splitKTOKD" input-channel="DEBMAS" evaluate-as-string="true" resolution-required="false"
+		default-output-channel="DEBMAS-NOTSUPPORTED-KTOKD">
+		<int-xml:xpath-expression id="splitKTOKDExpression" expression="//KTOKD" />
+		<int-xml:mapping value="DEBI" channel="DEBMAS-DEBI" />
+		<int-xml:mapping value="0001" channel="DEBMAS-DEBI" />
+		<int-xml:mapping value="0170" channel="DEBMAS-0170" />
+		</int-xml:xpath-router>
+
+</beans>

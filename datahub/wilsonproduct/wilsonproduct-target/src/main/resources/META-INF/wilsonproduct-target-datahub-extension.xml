@@ -1,0 +1,181 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2018 SAP SE or an SAP affiliate company.
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of SAP
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with SAP.
+  -->
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.hybris.com/schema/"
+		   xsi:schemaLocation="http://www.hybris.com/schema/ http://www.hybris.com/schema/datahub-metadata-schema-1.3.0.xsd"
+		   name="wilsonproduct-target">
+
+	<dependencies>
+		<dependency>
+			<extension>wilsonproduct-canonical</extension>
+		</dependency>
+		<dependency>
+			<extension>saperpproduct-target</extension>
+		</dependency>
+	</dependencies>
+
+	<targetSystems>
+		<targetSystem>
+			<name>HybrisCore</name>
+			<type>HybrisCore</type>
+			<exportURL>${targetsystem.hybriscore.url}</exportURL>
+			<userName>${targetsystem.hybriscore.username}</userName>
+			<password>${targetsystem.hybriscore.password}</password>
+			<exportCodes>
+				<exportCode>#% impex.setLocale( Locale.ENGLISH )</exportCode>
+			</exportCodes>
+			<targetItems>
+				<item>
+					<exportCode>SolrIndexedProperty</exportCode>
+					<type>SolrIndexedPropertyTarget</type>
+					<description>Solr Indexed Property</description>
+					<canonicalItemSource>CanonicalAttributeCategoryRelation</canonicalItemSource>
+                    <updatable>true</updatable>
+					<dependencies>
+						<dependency>ClassAttributeAssignment</dependency>
+					</dependencies>
+					<attributes>
+						<attribute>
+							<name>solrIndexedType</name>
+							<transformationExpression>'wilsontoolsProductType'</transformationExpression>
+							<exportCode>solrIndexedType(identifier)[unique=true]</exportCode>
+							<mandatoryInHeader>true</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>name</name>
+							<transformationExpression>'feature-' + attributeID</transformationExpression>
+							<exportCode>name[unique=true]</exportCode>
+							<mandatoryInHeader>true</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>type</name>
+							<transformationExpression>'string'</transformationExpression>
+							<exportCode>type(code)</exportCode>
+							<mandatoryInHeader>true</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>localized</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>localized[default=true]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>multiValue</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>multiValue[default=true]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>facet</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>facet[default=true]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>facetType</name>
+							<transformationExpression>'MultiSelectOr'</transformationExpression>
+							<exportCode>facetType(code)</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>facetSort</name>
+							<transformationExpression>'Alpha'</transformationExpression>
+							<exportCode>facetSort(code)</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>priority</name>
+							<transformationExpression>'10000'</transformationExpression>
+							<exportCode>priority</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>visible</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>visible</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>fieldValueProvider</name>
+							<transformationExpression>'commerceClassificationPropertyValueProvider'</transformationExpression>
+							<exportCode>fieldValueProvider</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>classAttributeAssignment</name>
+							<transformationExpression>categoryID + '->' + attributeID</transformationExpression>
+							<exportCode>@classAttributeAssignment[translator=com.hybris.wilsontools.core.translators.WilsonToolsClassAttributeTranslator]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>topValuesProvider</name>
+							<transformationExpression>'defaultTopValuesProvider'</transformationExpression>
+							<exportCode>topValuesProvider</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						
+					</attributes>
+				</item>
+				
+				<item>
+					<exportCode>SolrSearchQueryProperty</exportCode>
+					<type>SolrSearchQueryPropertyTarget</type>
+					<description>Solr Search Query Property</description>
+					<canonicalItemSource>CanonicalAttributeCategoryRelation</canonicalItemSource>
+                    <updatable>true</updatable>
+					<dependencies>
+						<dependency>SolrIndexedPropertyTarget</dependency>
+					</dependencies>
+					<attributes>
+						<attribute>
+							<name>indexedProperty</name>
+							<transformationExpression>'feature-' + attributeID +':wilsontoolsProductType'</transformationExpression>
+							<exportCode>indexedProperty(name, solrIndexedType(identifier))[unique=true]</exportCode>
+							<mandatoryInHeader>true</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>facet</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>facet[default=true]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>facetType</name>
+							<transformationExpression>'Refine'</transformationExpression>
+							<exportCode>facetType(code)</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>priority</name>
+							<transformationExpression>'10000'</transformationExpression>
+							<exportCode>priority</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>includeInResponse</name>
+							<transformationExpression>'true'</transformationExpression>
+							<exportCode>includeInResponse[default=true]</exportCode>
+							<mandatoryInHeader>false</mandatoryInHeader>
+						</attribute>
+						<attribute>
+							<name>searchQueryTemplate</name>
+							<transformationExpression>''</transformationExpression>
+							<exportCode>searchQueryTemplate(name, indexedType(identifier))[unique=true][default='DEFAULT:wilsontoolsProductType']</exportCode>
+							<mandatoryInHeader>true</mandatoryInHeader>
+						</attribute>
+						
+					</attributes>
+				</item>
+			</targetItems>
+		</targetSystem>
+	</targetSystems>
+
+</extension>

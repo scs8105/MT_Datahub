@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2018 SAP SE or an SAP affiliate company.
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of SAP
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with SAP.
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.hybris.datahub</groupId>
+	<artifactId>wilsoncustomer</artifactId>
+	<version>1.0</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jre.source.version>1.8</jre.source.version>
+		<jre.target.version>1.8</jre.target.version>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<guava.version>26.0-jre</guava.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-extension-sdk</artifactId>
+				<version>18.11.0-RC5</version>
+				<scope>system</scope>
+                <systemPath>${basedir}/../config/lib/datahub-extension-sdk-18.11.0-RC5.jar</systemPath>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>wilsoncustomer-raw</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>wilsoncustomer-canonical</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>wilsoncustomer-target</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<source>${jre.source.version}</source>
+						<target>${jre.target.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+  <modules>
+    <module>wilsoncustomer-raw</module>
+    <module>wilsoncustomer-canonical</module>
+    <module>wilsoncustomer-target</module>
+  </modules>
+</project>

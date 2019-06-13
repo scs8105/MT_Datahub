@@ -1,0 +1,67 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2018 SAP SE or an SAP affiliate company.
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of SAP
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with SAP.
+  -->
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.hybris.com/schema/"
+		   xsi:schemaLocation="http://www.hybris.com/schema/ http://www.hybris.com/schema/datahub-metadata-schema-1.3.0.xsd"
+		   name="wilsoncustomer-raw">
+
+	<dependencies>
+		<dependency>
+			<extension>wilsoncustomer-canonical</extension>
+		</dependency>
+		<dependency>
+			<extension>sapcustomer-raw</extension>
+		</dependency>
+	</dependencies>
+
+	<rawItems>
+		<item>
+			<type>SampleRawItem</type>
+			<description>Raw representation of a sample raw item</description>
+			<attributes>
+				<attribute>
+					<name>identifier</name>
+				</attribute>
+				<attribute>
+					<name>sampleAttribute</name>
+				</attribute>
+			</attributes>
+		</item>
+	</rawItems>
+
+	<canonicalItems>
+		<item>
+			<type>SampleCanonicalItem</type>
+			<attributes>
+				<attribute>
+					<name>identifier</name>
+					<transformations>
+						<transformation>
+							<rawSource>SampleRawItem</rawSource>
+							<expression>identifier</expression>
+						</transformation>
+					</transformations>
+				</attribute>
+				<attribute>
+					<name>sampleAttribute</name>
+					<transformations>
+						<transformation>
+							<rawSource>SampleRawItem</rawSource>
+							<expression>sampleAttribute</expression>
+						</transformation>
+					</transformations>
+				</attribute>
+			</attributes>
+		</item>
+
+	</canonicalItems>
+
+</extension>
