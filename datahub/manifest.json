@@ -1,6 +1,9 @@
 {
     "datahub_version" : "1811.3",
     "extensions" : [
+        
+        "wilsonproduct",
+        "wilsoncustomer",
 
         "sapcoreconfiguration",
 
