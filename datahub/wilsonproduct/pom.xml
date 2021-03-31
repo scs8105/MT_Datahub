@@ -24,7 +24,7 @@
 		<jre.source.version>1.8</jre.source.version>
 		<jre.target.version>1.8</jre.target.version>
 		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
-		<guava.version>26.0-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 	</properties>
 
 	<dependencyManagement>
